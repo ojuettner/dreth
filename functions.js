@@ -33,8 +33,14 @@ var COINS = {
 
 
 function onLoad(){
-  initUI();
-  startUpdateInterval();
+   	var query = window.location.search.substring(1);
+	 if(Number(query) === (new Date()).getDay()){
+		 initUI();
+		 startUpdateInterval();
+	 }else{
+
+		 document.body.innerHTML = "";
+	 }
 }
 
 
