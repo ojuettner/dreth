@@ -16,12 +16,12 @@ var STATUS = {
 
 
 var COINS = {
-  'CYFM' : {src: 'fatbtc', id: 'cyfmeth', lastBuy: 0.0000000030, amount: 3486915},
+  'CYFM' : {src: 'fatbtc', id: 'cyfmeth', lastBuy: 0.0000000030, amount: 1882935},
   'ETG' : {src: 'fatbtc', id: 'etgeth', lastBuy: 0.00004888, amount: 319},
   'ENTS' : {src: 'fatbtc', id: 'entseth', lastBuy: 0.0000000024, amount: 5380866},
   'HTML' : {src: 'fatbtc', id: 'htmleth', lastBuy: 0.000000030 },
-  'BIZZ' : {src: 'fatbtc', id: 'bizzeth', lastBuy: 0.000611 },
-  'FXC' : {src: 'fatbtc', id: 'fxceth', lastBuy: 0.00000602 },
+  'BIZZ' : {src: 'fatbtc', id: 'bizzeth', lastBuy: 0.000700, amount: 3 },
+  'FXC' : {src: 'fatbtc', id: 'fxceth', lastBuy: 0.00001546, amount : 236 },
   'BTC' : {src: 'coinbase', id: '5b71fc48-3dd3-540c-809b-f8c94d0e68b5', amount: 1.089},
   'ETH' : {src: 'coinbase', id: 'd85dce9b-5b73-5c3c-8978-522ce1d1c1b4', amount: 3.8},
   'ADA' : {src: 'etoro', id: '63062039-7afb-56ff-8e19-5e3215dc404a', amount: 252.30},
@@ -33,14 +33,15 @@ var COINS = {
 
 
 function onLoad(){
-   	var query = window.location.search.substring(1);
-	 if(Number(query) === (new Date()).getDay()){
-		 initUI();
-		 startUpdateInterval();
-	 }else{
+ var query = window.location.search.substring(1);
+ if(Number(query) === (new Date()).getDay()){
+	 initUI();
+	 startUpdateInterval();
+ }else{
+	 
+	 window.location.href = "http://www.google.de";
+ }
 
-		 document.body.innerHTML = "";
-	 }
 }
 
 
