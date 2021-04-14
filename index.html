@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"/>
+<head>
+  <script src="canvasjs.min.js"></script>
+  <script src="functions.js"></script>
+
+  <style>
+
+	* {
+		font-family: Comic Sans MS;
+
+	}
+
+    table, tr {
+      border: solid;
+      font-size: 20px;
+      color: white;
+    }
+
+	button {
+	font-size: 20px;
+
+	}
+
+	#settings {
+		 text-align: center;
+	}
+
+    h1 {
+      text-decoration: underline;
+	   text-align: center;
+     color: white;
+
+    }
+
+    h3, label {
+
+      color: white;
+    }
+
+    body {
+      background-color: black;
+
+
+    }
+
+    td {
+      text-align: center;
+    }
+
+    .hodl {
+      color: orange;
+    }
+
+    .buy {
+      color: green;
+      cursor: pointer;
+    }
+
+    .sell {
+      color: red;
+      cursor: pointer;
+    }
+
+	.suspended {
+      color: gray;
+    }
+
+    #logo {
+      width: 100%;
+      height: 300px;
+
+      background-image: url("intro.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+  </style>
+<title>Dr. Eth</title>
+</head>
+<body onload="onLoad();">
+
+
+
+<h1>Dr. Eth</h1>
+<div id="logo"></div>
+
+<h3>Your total crypto amount (cb + etoro + fbtc + indoex): <span id="totalAmount">0</span> €</h3>
+<h3>Earned by trading today (cb + etoro + fbtc + indoex): <span id="tradedAmount">0</span> €</h3>
+<table id="coinTable" style="width:100%;">
+  <tr>
+    <th>Coin</th>
+    <th>Price</th>
+    <th>Trend 1h</th>
+    <th>Trend 1d</th>
+	<th>Chart 1y</th>
+    <th>Updated</th>
+    <th>Action</th>
+  </tr>
+</table>
+<div id="settings">
+<p><div>
+  <input type="checkbox" id="scales" name="scales"
+         checked>
+  <label for="scales">Automatic trading ... 😎</label>
+</div></p>
+<p><button onclick="onTradingClicked();">Trade by urself!</button></p>
+</div>
+</body>
+</html>
